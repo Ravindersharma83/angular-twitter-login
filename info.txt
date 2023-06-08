@@ -1,0 +1,13 @@
+1- Login in twitter to get the api key and seceret.
+2- Then go to - https://developer.twitter.com/en
+3- Go to developer portal , projects and apps and get or regenerate api ke and seceret.
+    Key - XD76E8Q0gBwg8PR9iYhu5bH1J
+    Seceret - IQ01bGC68BXL1S36f1CqBFSmDUFEtRvjNsywILak7re5auN2BL
+    Call -back url - https://angulartwitterlogin.firebaseapp.com/__/auth/handler
+
+
+4- npm install firebase @angular/fire --save
+5- setting up environment file
+6- ng generate service auth
+7- ng generate component signin
+8- configure the user authentication settings (https://developer.twitter.com/en/portal/projects/1666700611805405187/apps/27274724/settings)

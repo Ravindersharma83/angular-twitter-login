@@ -1,0 +1,23 @@
+<!-- <div class="formGroup">
+  <button type="button" (click)="authService.TwitterAuth()">
+    Log in with Twitter
+  </button>
+</div> -->
+
+<div *ngIf="!authService.user" class="container d-flex align-items-center justify-content-center">
+  <button class="m-4 btn btn-danger" type="button" (click)="authService.TwitterAuth()">
+    Log in with Twitter
+  </button>
+</div>
+
+<div *ngIf="authService.user" class="container d-flex align-items-center justify-content-center">
+  <div class="profile">
+      <img class="m-4" style="height: 100px;width: 100px; border-radius: 50px;" src="{{authService.user?.profile_image_url_https}}"/>
+      <p>{{authService.user?.name}}</p>
+      <p>{{authService.user?.email}}</p>
+  </div>
+  </div>
+  <hr>
+  <div *ngIf="authService.user" class="container d-flex align-items-center justify-content-center">
+      <button (click)="authService.signOut()" class="btn btn-danger">SignOut</button>
+  </div>
